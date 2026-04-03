@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>История наказаний</title>
+
+    <!-- Шрифты -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- CSS структура -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/faq.css">
+    <link rel="stylesheet" href="css/sort.css">
+    <link rel="stylesheet" href="css/search.css">
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <div class="header">
+        <div class="logo">История наказаний</div>
+        <div class="header-center">
+        </div>
+    </div>
+
+    <!-- Сортировки -->
+   <div class="control-panel">
+        <div class="stats-panel">
+            <div class="stats-item">
+                <span class="stats-number" id="stats-total">0</span>
+                <span class="stats-label">всего нарушений</span>
+            </div>
+            <div class="stats-item">
+                <span class="stats-number" id="stats-today">0</span>
+                <span class="stats-label">за сегодня</span>
+            </div>
+        </div>
+
+        <div class="sort-panel">
+            <div class="sort-tabs">
+                <div class="sort-tab-title">Время</div>
+                <div class="sort-tab-row">
+                    <button class="sort-tab active" data-sort="newest">Новые → старые</button>
+                    <button class="sort-tab" data-sort="oldest">Старые → новые</button>
+                </div>
+            </div>
+
+            <div class="sort-tabs">
+                <div class="sort-tab-title">Тип</div>
+                <div class="sort-tab-row">
+                    <button class="sort-tab active" data-type="all">Все</button>
+                    <button class="sort-tab" data-type="ban">Баны</button>
+                    <button class="sort-tab" data-type="mute">Муты</button>
+                </div>
+            </div>
+        </div>
+        <div class="search-title">Поиск</div>
+
+        <div class="search-field-wrapper">
+            <div class="search-field">
+                <span class="search-icon">🔍</span>
+                <input id="search-input" type="text" autocomplete="off">
+                <span id="search-shadow" class="search-shadow"></span>
+            </div>
+            <span id="search-measure" class="search-measure"></span>
+        </div>
+
+        <div class="search-suggestions" id="search-suggestions"></div>
+    </div>
+
+
+    <!-- ===== КОНТЕНТ ===== -->
+    <div class="content">
+        <h2 class="punish-title-main">Наказания</h2>
+        <div class="punish-subtitle" id="punish-count-small">Показано 0</div>
+
+        <div class="punish-list" id="punish-list">
+
+            <!-- Скелетоны -->
+            <div class="skeleton-card">
+                <div class="skeleton-avatar"></div>
+                <div class="skeleton-lines">
+                    <div class="skeleton-line short"></div>
+                    <div class="skeleton-line long"></div>
+                    <div class="skeleton-line medium"></div>
+                </div>
+            </div>
+
+            <div class="skeleton-card">
+                <div class="skeleton-avatar"></div>
+                <div class="skeleton-lines">
+                    <div class="skeleton-line short"></div>
+                    <div class="skeleton-line long"></div>
+                    <div class="skeleton-line medium"></div>
+                </div>
+            </div>
+
+            <div class="skeleton-card">
+                <div class="skeleton-avatar"></div>
+                <div class="skeleton-lines">
+                    <div class="skeleton-line short"></div>
+                    <div class="skeleton-line long"></div>
+                    <div class="skeleton-line medium"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ===== FAQ ===== -->
+    <div class="faq-floating">
+        <div class="faq-button">❔</div>
+
+        <div class="faq-panel">
+            <div class="faq-panel-title">Вопросы</div>
+
+            <div class="faq-panel-item">
+                <div class="faq-panel-question">1) Почему в истории не все наказания?</div>
+                <div class="faq-panel-answer">
+                    У меня нет инструментов получать наказания с сервера обычным путём, поэтому существует мод который их перехватывает и отправляет в базу данных.
+                </div>
+            </div>
+
+            <div class="faq-panel-item">
+                <div class="faq-panel-question">2) Когда добавляются новые наказания?</div>
+                <div class="faq-panel-answer">Они появляются через 5-10 минут после самого наказания.</div>
+            </div>
+
+            <div class="faq-panel-item">
+                <div class="faq-panel-question">3) Как помогать в добавлении новых наказаний?</div>
+                <div class="faq-panel-answer">Вы можете написать Collumy, чтобы он вам выдал мод, однако во избежании неприятностей, мод может быть выдан не всем.</div>
+            </div>
+
+            <div class="faq-panel-item">
+                <div class="faq-panel-question">4) Кем это создано и зачем?</div>
+                <div class="faq-panel-answer">Это было создано Collumy, для игроков, модератор ну и всех. Просто захотелось.</div>
+            </div>
+
+            <div class="faq-panel-item">
+                <div class="faq-panel-question">5) Кто такой Коллуми?</div>
+                <div class="faq-panel-answer">Сыр? СЫР!</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== JS МОДУЛИ ===== -->
+    <script type="module" src="js/main.js"></script>
+
+</body>
+</html>

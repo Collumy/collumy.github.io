@@ -1,0 +1,191 @@
+/* ===== ПОИСК ===== */
+.search-panel {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.search-title {
+    display: none;
+}
+
+/* ===== ТЕНЕВОЙ АВТОКОМПЛИТ ===== */
+.search-field-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+/* теневая подсказка */
+.search-shadow {
+    position: absolute;
+    left: 46px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.25);
+    white-space: nowrap;
+    z-index: 1;
+    user-select: none;
+}
+
+/* скрытый измеритель ширины текста */
+#search-measure {
+    position: absolute;
+    visibility: hidden;
+    white-space: pre;
+    font-size: 16px;
+    font-family: inherit;
+    font-weight: inherit;
+    letter-spacing: inherit;
+    padding: 0;
+    margin: 0;
+    top: -9999px;
+    left: -9999px;
+}
+
+/* мягкая, слитная подсветка совпадений */
+.highlight {
+    color: #9fffe0;
+    font-weight: 600;
+    background: rgba(159, 255, 224, 0.12);
+    border-radius: 4px;
+    padding: 0 2px;
+}
+
+/* ===== СТЕКЛЯННОЕ ПОЛЕ ===== */
+.search-field {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 14px 18px;
+    border-radius: 16px;
+
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
+
+    transition: all 0.25s ease;
+}
+
+.search-field:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.search-field:focus-within {
+    border-color: #9fffe0;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 0 3px rgba(159, 255, 224, 0.1);
+}
+
+.search-icon {
+    font-size: 20px;
+    opacity: 0.7;
+    transition: 0.2s ease;
+}
+
+.search-field:focus-within .search-icon {
+    opacity: 1;
+    color: #9fffe0;
+}
+
+.search-field input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 6px 0;
+}
+
+.search-field input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 16px;
+}
+
+/* ===== ПОДСКАЗКИ ===== */
+.search-suggestions {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+
+    border-radius: 14px;
+    overflow: hidden;
+
+    background: rgba(25, 25, 35, 0.45);
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    display: none;
+    flex-direction: column;
+
+    z-index: 500; 
+    animation: fadeIn 0.25s ease forwards;
+}
+
+
+.search-suggestions.visible {
+    display: flex;
+}
+
+.search-suggestion-item {
+    padding: 14px 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.search-suggestion-item:hover {
+    background: rgba(159, 255, 224, 0.08);
+    backdrop-filter: blur(14px);
+}
+
+.search-suggestion-name {
+    font-size: 15px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    letter-spacing: normal;
+}
+
+.search-suggestion-role {
+    font-size: 12px;
+    opacity: 0.7;
+    padding: 3px 8px;
+    border-radius: 8px;
+
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.search-suggestion-count {
+    font-size: 13px;
+    opacity: 0.7;
+    font-weight: 400;
+}
+
+/* ===== АНИМАЦИИ ===== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

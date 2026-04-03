@@ -1,0 +1,249 @@
+/* ===== КОНТРОЛ ПАНЕЛЬ ===== */
+.control-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+
+    margin: 32px auto 32px auto;
+    padding: 28px 36px;
+
+    width: fit-content;
+    min-width: 320px;
+    max-width: 90%;
+
+    background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.04) 100%);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 24px;
+    backdrop-filter: blur(20px);
+
+    box-shadow:
+        0 8px 32px rgba(0,0,0,0.3),
+        inset 0 1px 0 rgba(255,255,255,0.1),
+        inset 0 -1px 0 rgba(0,0,0,0.2);
+
+    transition: all 0.3s ease;
+}
+
+.control-panel:hover {
+    border-color: rgba(159,255,224,0.3);
+    box-shadow:
+        0 12px 40px rgba(0,0,0,0.4),
+        inset 0 1px 0 rgba(255,255,255,0.12);
+}
+
+/* ===== СТАТИСТИКА ===== */
+.stats-panel {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.stats-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 8px 16px;
+}
+
+.stats-item::after {
+    content: '';
+    position: absolute;
+    right: -24px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.2), transparent);
+}
+
+.stats-item:last-child::after {
+    display: none;
+}
+
+.stats-number {
+    font-size: 32px;
+    font-weight: 800;
+    background: linear-gradient(135deg, #9fffe0 0%, #6ee7c0 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 20px rgba(159,255,224,0.3);
+    letter-spacing: 1px;
+}
+
+.stats-label {
+    font-size: 13px;
+    font-weight: 500;
+    opacity: 0.7;
+    margin-top: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ===== СОРТИРОВКИ ===== */
+.sort-panel {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    flex-wrap: wrap;
+}
+
+.sort-tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 200px;
+}
+
+.sort-tab-title {
+    font-size: 13px;
+    font-weight: 600;
+    opacity: 0.6;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-left: 4px;
+}
+
+.sort-tab-row {
+    display: flex;
+    gap: 10px;
+    background: rgba(0,0,0,0.2);
+    padding: 4px;
+    border-radius: 16px;
+}
+
+.sort-tab {
+    flex: 1;
+    padding: 10px 20px;
+    border-radius: 12px;
+
+    background: transparent;
+    border: none;
+    backdrop-filter: none;
+
+    color: rgba(255,255,255,0.7);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.sort-tab::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255,255,255,0.05);
+    border-radius: 12px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    z-index: -1;
+}
+
+.sort-tab:hover::before {
+    opacity: 1;
+}
+
+.sort-tab:hover {
+    color: rgba(255,255,255,0.95);
+    transform: translateY(-1px);
+}
+
+.sort-tab.active {
+    background: linear-gradient(135deg, rgba(159,255,224,0.2) 0%, rgba(110,231,192,0.15) 100%);
+    color: #9fffe0;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.sort-tab.active::before {
+    opacity: 0;
+}
+
+/* ===== АНИМАЦИИ ===== */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.control-panel {
+    animation: slideIn 0.4s ease-out;
+}
+
+.sort-tab {
+    position: relative;
+}
+
+.sort-tab:active {
+    transform: translateY(0);
+}
+
+/* ===== АДАПТИВНОСТЬ ===== */
+@media (max-width: 768px) {
+    .control-panel {
+        padding: 20px 24px;
+        gap: 24px;
+    }
+    
+    .stats-panel {
+        gap: 24px;
+    }
+    
+    .stats-item::after {
+        right: -12px;
+        height: 30px;
+    }
+    
+    .sort-panel {
+        gap: 32px;
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .sort-tabs {
+        min-width: auto;
+    }
+    
+    .stats-number {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-panel {
+        gap: 16px;
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .stats-item::after {
+        display: none;
+    }
+    
+    .stats-item {
+        padding: 4px 0;
+    }
+    
+    .sort-tab-row {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .sort-tab {
+        padding: 10px 16px;
+    }
+}
