@@ -141,3 +141,36 @@
 
 .ban { border-left-color: #ff4d4d; }
 .mute { border-left-color: #4da6ff; }
+
+
+.prefix {
+    display: inline-block;
+    padding: 2px 5px;
+    border-radius: 20px;
+    font-size: 0.75em;
+    font-weight: 600;
+    color: white;
+    vertical-align: middle;
+    background: linear-gradient(120deg, 
+        rgba(255, 100, 150, 0.18),
+        rgba(100, 200, 255, 0.18),
+        rgba(100, 255, 150, 0.18),
+        rgba(255, 200, 100, 0.18),
+        rgba(200, 100, 255, 0.18));
+    background-size: 400% 100%;
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: smoothFlow 8s linear infinite;
+}
+
+@keyframes smoothFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 400% 50%;
+    }
+}

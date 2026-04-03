@@ -1,3 +1,18 @@
+import { prefixes } from "./data.js"; // важно: чтобы видеть загруженные префиксы
+
+function renderPrefix(nick) {
+    const p = prefixes[nick];
+    if (!p) return ""; // нет префикса — ничего не вставляем
+
+    return `
+        <span class="prefix" style="background:${p.color}">
+            ${p.text}
+        </span>
+    `;
+}
+
+
+
 export function renderPunishments(list, highlightQuery = null, count = null) {
     const container = document.getElementById("punish-list");
     container.innerHTML = "";
@@ -10,17 +25,21 @@ export function renderPunishments(list, highlightQuery = null, count = null) {
         const highlightMod = highlightQuery ? highlightMatch(p.moderator, highlightQuery) : p.moderator;
         const highlightPlayer = highlightQuery ? highlightMatch(p.player, highlightQuery) : p.player;
 
+        const modPrefix = renderPrefix(p.moderator);
+        const playerPrefix = renderPrefix(p.player);
+
         card.innerHTML = `
             <div class="punish-header">
                 <img src="https://mc-heads.net/avatar/${p.moderator}/64">
                 <div>
-                    <div class="name">${highlightMod}</div>
+                    <div class="name">${highlightMod}${modPrefix}</div>
                     <div class="time">${p.time}</div>
                 </div>
             </div>
 
             <div class="punish-title">
-                ${p.type === "ban" ? "Бан" : "Мут"} ${highlightPlayer}
+                ${p.type === "ban" ? "Бан" : "Мут"}
+                ${highlightPlayer}${playerPrefix}
                 <span class="small">на ${p.duration}</span>
             </div>
 
