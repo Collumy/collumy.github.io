@@ -1671,7 +1671,14 @@
         "w": "Bumbukio"
       }
     ],
-    "bans": []
+    "bans": [
+      {
+        "r": "спавнкил",
+        "l": 14400,
+        "s": 1775666109536,
+        "w": "Zingeer"
+      }
+    ]
   },
   "Ogrizok_yabloka": {
     "mutes": [
