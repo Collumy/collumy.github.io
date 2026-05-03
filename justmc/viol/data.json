@@ -6820,7 +6820,14 @@
         "w": "AethorWar"
       }
     ],
-    "bans": []
+    "bans": [
+      {
+        "r": "3.2 - Читы",
+        "l": 31536000,
+        "s": 1777797648349,
+        "w": "Collumy"
+      }
+    ]
   },
   "cupapelaelisey": {
     "mutes": [
