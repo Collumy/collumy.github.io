@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBS Glass Editor</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/glass.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="title-section">
+            <h1>🎙️ NBS <span class="gradient-text">Glass Editor</span></h1>
+            <p class="subhead">загрузи .nbs, отредактируй метаданные, получи компактную строку</p>
+        </div>
+
+        <!-- Зона загрузки -->
+        <div class="upload-zone glass" id="dropZone">
+            <div class="upload-icon">📂🎵</div>
+            <p class="upload-text">Нажми или перетащи сюда <strong>.nbs файл</strong></p>
+            <input type="file" id="fileInput" accept=".nbs, .NBS">
+            <div class="file-status" id="fileStatus">файл не выбран</div>
+        </div>
+
+        <!-- Панель редактора -->
+        <div class="editor-panel glass" id="editorPanel" style="display: none;">
+            <div class="panel-header">
+                <span>✎ РЕДАКТОР МЕТАДАННЫХ</span>
+                <span class="badge" id="versionBadge">NBS v?</span>
+            </div>
+            <div class="editor-grid">
+                <div class="input-field">
+                    <label>🎼 Название композиции</label>
+                    <input type="text" id="songTitleInput" placeholder="например, 'Dreamscape'">
+                </div>
+                <div class="input-field">
+                    <label>✍️ Автор</label>
+                    <input type="text" id="songAuthorInput" placeholder="автор">
+                </div>
+                <div class="input-field">
+                    <label>📦 Предмет (item id)</label>
+                    <input type="text" id="itemIdInput" placeholder="minecraft:paper">
+                    <small>стандарт: paper</small>
+                </div>
+                <div class="input-field">
+                    <label>⚡ Темп (BPM)</label>
+                    <input type="number" id="tempoInput" step="1" placeholder="авто из файла">
+                </div>
+            </div>
+            <div class="info-stats glass-inner">
+                <div class="stat"><span class="stat-label">📊 длительность (тики)</span> <span id="durationDisplay">—</span></div>
+                <div class="stat"><span class="stat-label">🎹 всего нот</span> <span id="notesCountDisplay">0</span></div>
+                <div class="stat"><span class="stat-label">🔤 компактная строка</span> <span id="compactLengthDisplay">0 символов</span></div>
+            </div>
+            <div class="action-buttons">
+                <button class="btn btn-primary" id="generateBtn">✨ СГЕНЕРИРОВАТЬ</button>
+            </div>
+        </div>
+
+        <!-- Результат -->
+        <div class="result-panel glass" id="resultPanel" style="display: none;">
+            <div class="result-header">
+                <span>📦 РЕЗУЛЬТАТ (music_data)</span>
+                <button class="btn-icon" id="copyResultBtn" title="Копировать">📋</button>
+            </div>
+            <textarea id="compactResult" rows="3" readonly placeholder="компактная строка..."></textarea>
+            <div class="submit-area">
+                <button class="btn btn-accent" id="uploadToServerBtn">📤 ПОЛУЧИТЬ ССЫЛКУ</button>
+                <div id="serverResponse" class="server-feedback"></div>
+            </div>
+        </div>
+
+        <!-- Ошибки -->
+        <div id="errorToast" class="error-toast glass" style="display: none;">
+            <span>⚠️</span> <span id="errorMessage"></span>
+        </div>
+
+        <footer class="footer">
+            <span>@nbsjs/core</span> • <span>инструмент(5) + нота(5) + громкость(5) + пауза \uFFFF</span>
+        </footer>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
