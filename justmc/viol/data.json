@@ -12786,5 +12786,16 @@
       }
     ],
     "bans": []
+  },
+  "JustCoolSkeleton": {
+    "mutes": [
+      {
+        "r": "2.7",
+        "l": 86400,
+        "s": 1780595625692,
+        "w": "pxlymorphism"
+      }
+    ],
+    "bans": []
   }
 }
