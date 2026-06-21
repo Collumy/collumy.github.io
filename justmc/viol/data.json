@@ -17516,5 +17516,16 @@
         "w": "kot_v_sapogax2"
       }
     ]
+  },
+  "JustCommunity": {
+    "mutes": [
+      {
+        "r": "2.3",
+        "l": 1800,
+        "s": 1782065804621,
+        "w": "kot_v_sapogax2"
+      }
+    ],
+    "bans": []
   }
 }
