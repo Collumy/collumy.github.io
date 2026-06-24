@@ -18781,5 +18781,16 @@
         "w": "kot_v_sapogax2"
       }
     ]
+  },
+  "SkibidiGrno2": {
+    "mutes": [
+      {
+        "r": "2.7",
+        "l": 7200,
+        "s": 1782305669570,
+        "w": "kot_v_sapogax2"
+      }
+    ],
+    "bans": []
   }
 }
