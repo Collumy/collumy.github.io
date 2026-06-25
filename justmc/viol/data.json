@@ -19273,7 +19273,14 @@
         "w": "kot_v_sapogax2"
       }
     ],
-    "bans": []
+    "bans": [
+      {
+        "r": "2.7",
+        "l": 86400,
+        "s": 1782400615244,
+        "w": "kot_v_sapogax2"
+      }
+    ]
   },
   "DarkOdessey": {
     "mutes": [
