@@ -19325,5 +19325,16 @@
         "w": "kot_v_sapogax2"
       }
     ]
+  },
+  "FurinaFontain": {
+    "mutes": [
+      {
+        "r": "2.1",
+        "l": 3600,
+        "s": 1782403189033,
+        "w": "kot_v_sapogax2"
+      }
+    ],
+    "bans": []
   }
 }
