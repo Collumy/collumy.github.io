@@ -19409,5 +19409,16 @@
         "w": "kot_v_sapogax2"
       }
     ]
+  },
+  "GUN_DONskoi": {
+    "mutes": [
+      {
+        "r": "2.3",
+        "l": 1800,
+        "s": 1782405093295,
+        "w": "kot_v_sapogax2"
+      }
+    ],
+    "bans": []
   }
 }
