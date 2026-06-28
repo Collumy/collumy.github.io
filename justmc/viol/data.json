@@ -20593,5 +20593,16 @@
         "w": "kot_v_sapogax2"
       }
     ]
+  },
+  "KOROLER_UTC": {
+    "mutes": [
+      {
+        "r": "2.1",
+        "l": 3600,
+        "s": 1782654950288,
+        "w": "kot_v_sapogax2"
+      }
+    ],
+    "bans": []
   }
 }
