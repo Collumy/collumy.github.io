@@ -21348,5 +21348,16 @@
         "w": "kot_v_sapogax2"
       }
     ]
+  },
+  "Kulka_BTomate": {
+    "mutes": [
+      {
+        "r": "2.3",
+        "l": 1800,
+        "s": 1782819318772,
+        "w": "AethorWar"
+      }
+    ],
+    "bans": []
   }
 }
