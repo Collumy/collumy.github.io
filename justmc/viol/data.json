@@ -21382,5 +21382,16 @@
         "w": "kot_v_sapogax2"
       }
     ]
+  },
+  "SIGMALUKAWENKO52": {
+    "mutes": [
+      {
+        "r": "2.1",
+        "l": 14400,
+        "s": 1782825744072,
+        "w": "kot_v_sapogax2"
+      }
+    ],
+    "bans": []
   }
 }
