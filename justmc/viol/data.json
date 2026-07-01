@@ -21842,5 +21842,16 @@
       }
     ],
     "bans": []
+  },
+  "Stickman_Complex": {
+    "mutes": [
+      {
+        "r": "2.7",
+        "l": 1800,
+        "s": 1782921615732,
+        "w": "pxlymorphism"
+      }
+    ],
+    "bans": []
   }
 }
