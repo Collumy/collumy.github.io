@@ -17628,7 +17628,14 @@
         "w": "AethorWar"
       }
     ],
-    "bans": []
+    "bans": [
+      {
+        "r": "test",
+        "l": 1,
+        "s": 1783015894412,
+        "w": "pxlymorphism"
+      }
+    ]
   },
   "AkulichGG": {
     "mutes": [
