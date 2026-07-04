@@ -23361,5 +23361,16 @@
         "w": "kot_v_sapogax2"
       }
     ]
+  },
+  "LecternDev": {
+    "mutes": [
+      {
+        "r": "2.1",
+        "l": 14400,
+        "s": 1783191748989,
+        "w": "kot_v_sapogax2"
+      }
+    ],
+    "bans": []
   }
 }
