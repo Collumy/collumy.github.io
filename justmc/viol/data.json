@@ -23484,5 +23484,16 @@
         "w": "kot_v_sapogax2"
       }
     ]
+  },
+  "ggJuztArty": {
+    "mutes": [
+      {
+        "r": "2.1",
+        "l": 43200,
+        "s": 1783243819194,
+        "w": "kot_v_sapogax2"
+      }
+    ],
+    "bans": []
   }
 }
