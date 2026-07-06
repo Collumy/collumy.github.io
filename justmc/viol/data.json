@@ -23765,5 +23765,16 @@
         "w": "kot_v_sapogax2"
       }
     ]
+  },
+  "GummyBearchick1": {
+    "mutes": [],
+    "bans": [
+      {
+        "r": "Читы",
+        "l": 2592000,
+        "s": 1783322512791,
+        "w": "kot_v_sapogax2"
+      }
+    ]
   }
 }
