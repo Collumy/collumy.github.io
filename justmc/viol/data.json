@@ -24389,5 +24389,16 @@
         "w": "kot_v_sapogax2"
       }
     ]
+  },
+  "MrLopstarYouTube": {
+    "mutes": [
+      {
+        "r": "2.3",
+        "l": 1800,
+        "s": 1783445929120,
+        "w": "kot_v_sapogax2"
+      }
+    ],
+    "bans": []
   }
 }
